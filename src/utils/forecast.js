@@ -9,7 +9,7 @@ const forecast=(lantitude,longitude,callback)=>{
         }else if(body.error){
             callback('Unable to find location',undefined)
         }else{
-            callback(undefined,'There is a '+body.daily[1].weather[0].description+" The Tempreture is: "+body.current.temp+" Celsius degrees out and The percentage of Cloud is:"+body.current.clouds+" The humidity is:"+body.current.humidity)
+            callback(undefined,'There is a '+body.daily[1].weather[0].description+". The Tempreture is: "+body.current.temp+" Celsius degrees out. The percentage of Cloud is: "+body.current.clouds+". The humidity is: "+body.current.humidity+". And The visibility is: "+body.current.visibility)
         }
 
     })
